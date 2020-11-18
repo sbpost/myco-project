@@ -1,0 +1,9 @@
+After running the code, this folder should contain the following files:
+
+- corp.csv
+- corp_filings.csv
+- addresses.csv
+- activities.csv
+- officers.csv
+- mortgages.csv
+

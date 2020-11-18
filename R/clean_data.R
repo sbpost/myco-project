@@ -1,6 +1,11 @@
 clean_data <- function(tbl) {
+  # This function performs some cursory cleaning of the variables
+  # before they are written to file. Currently, only some obvious 
+  # missing values ("" in string vars) are made missing (NA_character)
+  # and potential duplicate records are removed. I still leave in 
+  # entries called "N/A" by the source data. 
   
-# Turn "" into NA values for str variables
+  # Turn "" into NA values for str variables
   fix_empty_str <- function(x) {
     x <- ifelse(x == "", NA_character_, x)
     return(x)

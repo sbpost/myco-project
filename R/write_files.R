@@ -7,7 +7,9 @@ write_files <- function(
   mortgages_path,
   officers_path
 ) {
- 
+  
+  # This function just writes the files to .csv. Nothing fancy.
+  
   # Corp 
   write_csv(
     tbl_ls$corp_tbl,
@@ -26,7 +28,7 @@ write_files <- function(
     file = activities_path 
   )
   
-   # Addresses
+  # Addresses
   write_csv(
     tbl_ls$addresses_tbl,
     file = addresses_path 
@@ -43,4 +45,5 @@ write_files <- function(
     tbl_ls$officers_tbl,
     file = officers_path
   )
+  
 }

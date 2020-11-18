@@ -28,7 +28,7 @@ extract_records <- function(curled_records) {
   ##----------------------------------------------------------------
   
   # For each get_* function, I first need turn all NULL (non-populated)
-  # entries into NA   # values, so I can remove them more easily later. I do
+  # entries into NA values, so I can remove them more easily later. I do
   # this ins the get_* functions to escape the function with an NA value and 
   # move to next entry.
   
@@ -167,7 +167,7 @@ extract_records <- function(curled_records) {
     # `SecondaryAddress`. It seems like `Receiver` is mostly empty. `Address` and 
     # `SecondaryAddress` is tied to a an Officer ID, which is also mostly empty. 
     # Without tying it to a specific officer, the information does not have value.
-    # I don't include the address-parts parts. 
+    # I don't include the address-parts. 
     
     # Grab records
     mortgages_tbl <- as_tibble(record$Mortgages) %>%
@@ -209,7 +209,7 @@ extract_records <- function(curled_records) {
       select(-c(Address, SecondaryAddress, Shares, ValidationResults, AnyErrors))
     
     # Officers$Address and Officers are always the same length. 
-    # They map 1-to-1. I therefor just add the columns in the Address to the
+    # They map 1-to-1. I just add the columns in the Address to the
     # officer column.
     officers_address_tbl <-
       record$Officers$Address %>% 
